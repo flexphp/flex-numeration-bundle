@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <!--
+    Add routes in config/routes.yaml
+
+    flexphp_numeration_bundle_routes:
+        resource: "@FlexPHPNumerationBundle/config/routes.xml"
+        prefix: /
+    -->
+
+    <route id="flexphp.numeration.numerations.index" controller="flexphp.numeration.bundle.numeration_controller::index" path="/numerations" methods="GET" />
+    <route id="flexphp.numeration.numerations.new" controller="flexphp.numeration.bundle.numeration_controller::new" path="/numerations/new" methods="GET" />
+    <route id="flexphp.numeration.numerations.create" controller="flexphp.numeration.bundle.numeration_controller::create" path="/numerations/create" methods="POST" />
+    <route id="flexphp.numeration.numerations.read" controller="flexphp.numeration.bundle.numeration_controller::read" path="/numerations/{id}" methods="GET" />
+    <route id="flexphp.numeration.numerations.edit" controller="flexphp.numeration.bundle.numeration_controller::edit" path="/numerations/edit/{id}" methods="GET" />
+    <route id="flexphp.numeration.numerations.update" controller="flexphp.numeration.bundle.numeration_controller::update" path="/numerations/update/{id}" methods="PUT" />
+    <route id="flexphp.numeration.numerations.delete" controller="flexphp.numeration.bundle.numeration_controller::delete" path="/numerations/delete/{id}" methods="DELETE" />
+
+    <route id="flexphp.numeration.providers.index" controller="flexphp.numeration.bundle.provider_controller::index" path="/providers" methods="GET" />
+    <route id="flexphp.numeration.providers.new" controller="flexphp.numeration.bundle.provider_controller::new" path="/providers/new" methods="GET" />
+    <route id="flexphp.numeration.providers.create" controller="flexphp.numeration.bundle.provider_controller::create" path="/providers/create" methods="POST" />
+    <route id="flexphp.numeration.providers.read" controller="flexphp.numeration.bundle.provider_controller::read" path="/providers/{id}" methods="GET" />
+    <route id="flexphp.numeration.providers.edit" controller="flexphp.numeration.bundle.provider_controller::edit" path="/providers/edit/{id}" methods="GET" />
+    <route id="flexphp.numeration.providers.update" controller="flexphp.numeration.bundle.provider_controller::update" path="/providers/update/{id}" methods="PUT" />
+    <route id="flexphp.numeration.providers.delete" controller="flexphp.numeration.bundle.provider_controller::delete" path="/providers/delete/{id}" methods="DELETE" />
+</routes>
+
