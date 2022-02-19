@@ -15,6 +15,8 @@ final class CreateProviderRequest implements RequestInterface
 {
     public $id;
 
+    public $type;
+
     public $name;
 
     public $username;
@@ -30,6 +32,7 @@ final class CreateProviderRequest implements RequestInterface
     public function __construct(array $data, int $createdBy)
     {
         $this->id = $data['id'] ?? null;
+        $this->type = $data['type'] ?? null;
         $this->name = $data['name'] ?? null;
         $this->username = $data['username'] ?? null;
         $this->password = $data['password'] ?? null;

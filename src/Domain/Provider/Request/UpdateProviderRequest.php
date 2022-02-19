@@ -15,6 +15,8 @@ final class UpdateProviderRequest implements RequestInterface
 {
     public $id;
 
+    public $type;
+
     public $name;
 
     public $username;
@@ -32,6 +34,7 @@ final class UpdateProviderRequest implements RequestInterface
     public function __construct(string $id, array $data, int $updatedBy, bool $_patch = false)
     {
         $this->id = $id;
+        $this->type = $data['type'] ?? null;
         $this->name = $data['name'] ?? null;
         $this->username = $data['username'] ?? null;
         $this->password = $data['password'] ?? null;

@@ -34,6 +34,7 @@ class MySQLProviderGateway implements ProviderGateway
 
         $query->select([
             'provider.Id as id',
+            'provider.Type as type',
             'provider.Name as name',
             'provider.Username as username',
             'provider.Password as password',
@@ -63,6 +64,7 @@ class MySQLProviderGateway implements ProviderGateway
         $query->insert('`Providers`');
 
         $query->setValue('Id', ':id');
+        $query->setValue('Type', ':type');
         $query->setValue('Name', ':name');
         $query->setValue('Username', ':username');
         $query->setValue('Password', ':password');
@@ -73,6 +75,7 @@ class MySQLProviderGateway implements ProviderGateway
         $query->setValue('CreatedBy', ':createdBy');
 
         $query->setParameter(':id', $provider->id(), DB::STRING);
+        $query->setParameter(':type', $provider->type(), DB::STRING);
         $query->setParameter(':name', $provider->name(), DB::STRING);
         $query->setParameter(':username', $provider->username(), DB::STRING);
         $query->setParameter(':password', $provider->password(), DB::STRING);
@@ -93,6 +96,7 @@ class MySQLProviderGateway implements ProviderGateway
 
         $query->select([
             'provider.Id as id',
+            'provider.Type as type',
             'provider.Name as name',
             'provider.Username as username',
             'provider.Password as password',
@@ -123,6 +127,7 @@ class MySQLProviderGateway implements ProviderGateway
         $query->update('`Providers`');
 
         $query->set('Id', ':id');
+        $query->set('Name', ':type');
         $query->set('Name', ':name');
         $query->set('Username', ':username');
         $query->set('Password', ':password');
@@ -132,6 +137,7 @@ class MySQLProviderGateway implements ProviderGateway
         $query->set('UpdatedBy', ':updatedBy');
 
         $query->setParameter(':id', $provider->id(), DB::STRING);
+        $query->setParameter(':type', $provider->type(), DB::STRING);
         $query->setParameter(':name', $provider->name(), DB::STRING);
         $query->setParameter(':username', $provider->username(), DB::STRING);
         $query->setParameter(':password', $provider->password(), DB::STRING);

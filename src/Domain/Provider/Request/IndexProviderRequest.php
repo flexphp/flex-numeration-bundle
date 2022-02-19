@@ -18,6 +18,8 @@ final class IndexProviderRequest implements RequestInterface
 
     public $id;
 
+    public $type;
+
     public $name;
 
     public $username;
@@ -45,6 +47,7 @@ final class IndexProviderRequest implements RequestInterface
     public function __construct(array $data, int $_page, int $_limit = 50, ?string $timezone = null)
     {
         $this->id = $data['id'] ?? null;
+        $this->type = $data['type'] ?? null;
         $this->name = $data['name'] ?? null;
         $this->username = $data['username'] ?? null;
         $this->password = $data['password'] ?? null;

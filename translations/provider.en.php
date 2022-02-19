@@ -10,6 +10,7 @@ return [
     ],
     'label' => [
         'id' => 'Id',
+        'type' => 'Type',
         'name' => 'Name',
         'username' => 'Username',
         'password' => 'Password',

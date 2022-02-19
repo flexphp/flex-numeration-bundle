@@ -26,8 +26,8 @@ final class NumerationFormType extends AbstractType
                 'Factura' => 'FA',
                 'Nota Débito' => 'ND',
                 'Nota Crédito' => 'NC',
-                'Nómina' => 'NE',
-                'Nómina de  Ajuste' => 'NEA',
+                'Nómina' => 'NI',
+                'Nómina de  Ajuste' => 'NIA',
             ],
         ]);
 

@@ -25,6 +25,14 @@ final class ProviderFormType extends AbstractType
                 'maxlength' => 20,
             ],
         ]);
+        $builder->add('type', InputType\ChoiceType::class, [
+            'label' => 'label.type',
+            'required' => true,
+            'choices' => [
+                'Facturación' => 'FAC',
+                'Nómina' => 'NOM',
+            ],
+        ]);
         $builder->add('name', InputType\TextType::class, [
             'label' => 'label.name',
             'required' => true,

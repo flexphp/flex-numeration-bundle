@@ -28,6 +28,10 @@ final class ProviderFactory
             $provider->setId((string)$data['id']);
         }
 
+        if (isset($data['type'])) {
+            $provider->setType((string)$data['type']);
+        }
+
         if (isset($data['name'])) {
             $provider->setName((string)$data['name']);
         }

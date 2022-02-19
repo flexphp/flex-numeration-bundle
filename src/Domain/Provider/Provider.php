@@ -18,6 +18,8 @@ final class Provider
 
     private $id;
 
+    private $type;
+
     private $name;
 
     private $username;
@@ -43,6 +45,11 @@ final class Provider
     public function id(): ?string
     {
         return $this->id;
+    }
+
+    public function type(): ?string
+    {
+        return $this->type;
     }
 
     public function name(): ?string
@@ -103,6 +110,11 @@ final class Provider
     public function setId(string $id): void
     {
         $this->id = $id;
+    }
+
+    public function setType(string $type): void
+    {
+        $this->type = $type;
     }
 
     public function setName(string $name): void
