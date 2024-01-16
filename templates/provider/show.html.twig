@@ -24,8 +24,8 @@
             <!-- <div class="form-group"><label>{% trans %}label.password{% endtrans %}</label><div class="form-control-plaintext">{{ provider.password }}</div></div> -->
             <div class="form-group"><label>{% trans %}label.url{% endtrans %}</label><div class="form-control-plaintext">{{ provider.url }}</div></div>
             <div class="form-group"><label>{% trans %}label.isActive{% endtrans %}</label><div class="form-control-plaintext">{% if provider.isActive %}{% trans from 'messages' %}label.yes{% endtrans %}{% else %}{% trans from 'messages' %}label.no{% endtrans %}{% endif %}</div></div>
-            <div class="form-group"><label>{% trans %}label.createdAt{% endtrans %}</label><div class="form-control-plaintext">{{ provider.createdAt ? provider.createdAt|date('Y-m-d H:i:s') : '-' }}</div></div>
-            <div class="form-group"><label>{% trans %}label.updatedAt{% endtrans %}</label><div class="form-control-plaintext">{{ provider.updatedAt ? provider.updatedAt|date('Y-m-d H:i:s') : '-' }}</div></div>
+            <div class="form-group"><label>{% trans %}label.createdAt{% endtrans %}</label><div class="form-control-plaintext">{{ provider.createdAt ? provider.createdAt|date('Y-m-d H:i:s', app.user.timezone) : '-' }}</div></div>
+            <div class="form-group"><label>{% trans %}label.updatedAt{% endtrans %}</label><div class="form-control-plaintext">{{ provider.updatedAt ? provider.updatedAt|date('Y-m-d H:i:s', app.user.timezone) : '-' }}</div></div>
             <div class="form-group"><label>{% trans %}label.createdBy{% endtrans %}</label><div class="form-control-plaintext">{{ provider.createdByInstance.name|default('-') }}</div></div>
             <div class="form-group"><label>{% trans %}label.updatedBy{% endtrans %}</label><div class="form-control-plaintext">{{ provider.updatedByInstance.name|default('-') }}</div></div>
         </div>
